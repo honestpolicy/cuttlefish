@@ -283,7 +283,7 @@ GEM
     parallel (1.19.2)
     parser (2.7.1.4)
       ast (~> 2.4.1)
-    pg (1.0.0)
+    pg (1.2.3)
     premailer (1.11.1)
       addressable
       css_parser (>= 1.6.0)
@@ -351,6 +351,7 @@ GEM
       netrc (~> 0.8)
     rexml (3.2.4)
     rmagick (4.1.2)
+    rollbar (3.1.1)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -536,6 +537,7 @@ DEPENDENCIES
   rb-inotify
   rest-client
   rmagick
+  rollbar
   rspec-activemodel-mocks
   rspec-rails
   rubocop

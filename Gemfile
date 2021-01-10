@@ -69,35 +69,18 @@ gem "virtus"
 # For doing the webhooks to external sites
 gem "rest-client"
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-gem "puma"
-
-# Deploy with Capistrano
-# gem 'capistrano', group: :development
-
-# To use debugger
-# gem 'debugger'
-
-# We want to be able to use rack-mini-profiler in production
-gem "rack-mini-profiler"
-
-# For authorization with json web tokens
 gem "jwt"
+gem "puma"
+gem "rack-mini-profiler"
+gem "rollbar"
 
 group :development do
   gem "annotate"
-  # gem "capistrano", "~> 2"
   gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
   gem "graphiql-rails"
   gem "rubocop", require: false
-  # gem "rvm-capistrano", ">= 1.5.6", require: false
   gem "spring"
   gem "spring-commands-rspec"
-  # Webrick gives us annoying warnings "could not determine content-length
-  # of response body"
 
   gem "guard"
   gem "guard-rspec"
@@ -121,9 +104,8 @@ end
 
 group :development, :test do
   gem "capybara"
+  gem "rmagick"
   gem "rspec-activemodel-mocks"
   gem "rspec-rails"
   gem "selenium-webdriver"
-  # For resizing screenshots
-  gem "rmagick"
 end
