@@ -1,5 +1,18 @@
 # frozen_string_literal: true
 
+# == Schema Information
+#
+# Table name: addresses
+#
+#  id         :bigint           not null, primary key
+#  text       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+# Indexes
+#
+#  index_addresses_on_text  (text)
+#
 class Address < ActiveRecord::Base
   has_many :emails_sent, class_name: "Email", foreign_key: "from_address_id"
   has_many :deliveries

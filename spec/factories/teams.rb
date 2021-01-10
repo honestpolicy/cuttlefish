@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
-# Read about factories at https://github.com/thoughtbot/factory_girl
+# == Schema Information
+#
+# Table name: teams
+#
+#  id         :bigint           not null, primary key
+#  created_at :datetime
+#  updated_at :datetime
+#
 
 FactoryBot.define do
   factory :team do

@@ -88,6 +88,7 @@ gem "rack-mini-profiler"
 gem "jwt"
 
 group :development do
+  gem "annotate"
   # gem "capistrano", "~> 2"
   gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
   gem "graphiql-rails"
