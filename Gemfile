@@ -77,7 +77,7 @@ gem "rest-client"
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem "puma"
 
 # Deploy with Capistrano
 # gem 'capistrano', group: :development
@@ -92,16 +92,15 @@ gem "rack-mini-profiler"
 gem "jwt"
 
 group :development do
-  gem "capistrano", "~> 2"
+  # gem "capistrano", "~> 2"
   gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
   gem "graphiql-rails"
   gem "rubocop", require: false
-  gem "rvm-capistrano", ">= 1.5.6", require: false
+  # gem "rvm-capistrano", ">= 1.5.6", require: false
   gem "spring"
   gem "spring-commands-rspec"
   # Webrick gives us annoying warnings "could not determine content-length
   # of response body"
-  gem "thin"
 
   gem "guard"
   gem "guard-rspec"

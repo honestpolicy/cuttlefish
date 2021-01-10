@@ -1,9 +1,8 @@
 development:
   adapter: postgresql
   database: cuttlefish_development
-  username: postgres
-  password: cuttlefish
-  host: db
+  # username: postgres
+  # password: cuttlefish
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -11,6 +10,13 @@ development:
 test:
   adapter: postgresql
   database: cuttlefish_test
-  username: postgres
-  password: cuttlefish
-  host: db
+  # username: postgres
+  # password: cuttlefish
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
+  timeout: 5000
+  pool: 15
+  sslmode: "require"
