@@ -1,4 +1,4 @@
-smtp: bundle exec rake cuttlefish:smtp
+smtp: RAILS_ENV=production bundle exec rake cuttlefish:smtp
 log: bundle exec rake cuttlefish:log
-sidekiq: bundle exec sidekiq
-web: bundle exec rails s
+sidekiq: RAILS_ENV=production bundle exec sidekiq
+web: RAILS_ENV=production bundle exec rails s
