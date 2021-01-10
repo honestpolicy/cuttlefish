@@ -108,3 +108,5 @@ group :development, :test do
   gem "rspec-rails"
   gem "selenium-webdriver"
 end
+
+gem "redis-session-store"
