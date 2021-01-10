@@ -109,14 +109,13 @@ Rails.application.routes.draw do
   # to cuttlefish via the graphql api) and there is no immediate super easy
   # way to do authentication and check that the user is a site_admin.
   # So, disabling it for the moment. Let's hope we don't need it in an emergency
-  require "sidekiq/web"
-  authenticate :admin, ->(u) { u.site_admin? } do
-    mount Sidekiq::Web => "/sidekiq"
-  end
+  # require "sidekiq/web"
+  # authenticate :admin, ->(u) { u.site_admin? } do
+  #   mount Sidekiq::Web => "/sidekiq"
+  # end
 
   resources :admins, only: %i[index destroy]
-  resources :emails, only: %i[index show], as: :deliveries,
-                     controller: "deliveries"
+  resources :emails, only: %i[index show], as: :deliveries, controller: "deliveries"
   # Allow "." in the id's by using the constraint
   resources :addresses, only: [], constraints: { id: %r{[^/]+} } do
     member do
