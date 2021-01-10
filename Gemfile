@@ -9,20 +9,16 @@ gem "rails", "5.2.4.4"
 
 gem "pg"
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem "sass-rails"
-  # Don't upgrade to Bootstrap 3. It's already responsive, for example, so
-  # there's a bunch of things we need to do for the upgrade
-  gem "bootstrap-sass", "~> 2.0"
+gem "sass-rails"
+# Don't upgrade to Bootstrap 3. It's already responsive, for example, so
+# there's a bunch of things we need to do for the upgrade
+gem "bootstrap-sass", "~> 2.0"
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem "therubyracer", platforms: :ruby
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem "therubyracer", platforms: :ruby
+gem "less-rails"
 
-  gem "less-rails"
-  gem "uglifier"
-end
+gem "uglifier"
 
 gem "jquery-rails"
 
