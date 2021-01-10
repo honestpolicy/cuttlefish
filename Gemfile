@@ -55,7 +55,6 @@ gem "formtastic-bootstrap",
     ref: "f86eaef93bea0a06879b3977d7554864964a623f"
 gem "haml-coderay"
 gem "minitar"
-gem "newrelic_rpm"
 gem "nokogiri"
 gem "premailer"
 gem "pundit"
