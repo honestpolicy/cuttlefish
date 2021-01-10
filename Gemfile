@@ -2,8 +2,6 @@
 
 source "https://rubygems.org"
 
-gem "dotenv-rails"
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "5.2.4.4"
 
@@ -104,6 +102,7 @@ end
 
 group :development, :test do
   gem "capybara"
+  gem "dotenv-rails"
   gem "rmagick"
   gem "rspec-activemodel-mocks"
   gem "rspec-rails"

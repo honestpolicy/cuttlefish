@@ -37,3 +37,4 @@ postfix_log/messages
 # Use ansible as a virtualenv if you want
 ansible-2.5
 ansible-2.6
+node_modules
