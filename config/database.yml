@@ -16,7 +16,10 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  url: <%= ENV['DATABASE_URL'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_NAME'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
   timeout: 5000
   pool: 15
   sslmode: "require"
