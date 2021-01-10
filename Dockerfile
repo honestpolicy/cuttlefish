@@ -19,4 +19,5 @@ RUN bundle install
 COPY . .
 
 EXPOSE 3000 2222
-CMD ["foreman", "start"]
+CMD ["/bin/sh", "-c", "rm -f tmp/pids/server.pid && bundle exec rails server -b 0.0.0.0"]
+
